@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import Header from '../components/Header';
 import OsakaMap from '../components/OsakaMap';
 
@@ -9,7 +9,6 @@ const Map = () => {
       <h1>
       <Header />
       </h1>
-      Maps
       <OsakaMap />
     </div>
     
