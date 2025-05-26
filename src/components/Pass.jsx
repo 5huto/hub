@@ -1,12 +1,12 @@
 import React from 'react'
 
-type Props = {
-  label: string;
-  value: string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-};
+// type Props = {
+//   label: string;
+//   value: string;
+//   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+// };
 
-const Pass = (props: Props) => {
+const Pass = (props) => {
   return (
     <div>
       <label style={{ display: "block" }}>
