@@ -1,4 +1,3 @@
-import React, {useState} from 'react'
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
@@ -13,7 +12,8 @@ L.Icon.Default.mergeOptions({
 
 
 const OsakaMap = () => {
-  const position = [34.702485, 135.495951]; // JR大阪駅の緯度・経度
+  // const position = [34.702485, 135.495951]; // JR大阪駅の緯度・経度
+  const position = [34.70002, 135.497974];  //大阪市北区梅田1丁目
   return (
     <div>
       <MapContainer
@@ -26,6 +26,7 @@ const OsakaMap = () => {
           attribution='&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
+        
         <Marker position={position}>
           <Popup>JR大阪駅</Popup>
         </Marker>
