@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from '../components/Header';
-import OsakaMap from '../components/OsakaMap';
+import AllMap from '../components/AllMap';
 
 
 const Map = () => {
@@ -9,7 +9,7 @@ const Map = () => {
       <h1>
       <Header />
       </h1>
-      <OsakaMap />
+      <AllMap />
       {/* 全てピンの表示などのオプションを追加したい。 */}
     </div>
     
