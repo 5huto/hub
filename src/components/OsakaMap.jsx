@@ -1,7 +1,3 @@
-//再描画機能があるのかを調べる。
-//座標の更新が出来ていないのか、座標は変数内に入っていないのか
-
-
 import React, { useEffect, useState } from 'react';
 import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';

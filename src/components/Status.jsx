@@ -55,7 +55,7 @@ const styles = {
 };
 
 const Status = () => {
-  const sel = ["未処理", "警告", "撤去完了", "自転車無し"];
+  const sel = ["未処理", "撤去完了", "自転車無し"];
   const navigate = useNavigate();
 
   const [txtMap, setTxtMap] = useState(() => {
