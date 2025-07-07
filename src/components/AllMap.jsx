@@ -56,7 +56,7 @@ const AllMap = () => {
   return (
     <div>
       {error && <div className="text-red-500">{error}</div>}
-      <MapContainer center={center} zoom={16} scrollWheelZoom={true} style={{ height: '500px', width: '100%' }}>
+      <MapContainer center={center} zoom={16} scrollWheelZoom={true} style={{ height: '700px', width: '100%' }}>
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
           url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'

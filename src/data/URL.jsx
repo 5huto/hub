@@ -1,1 +1,1 @@
-export const getURL = () => "https://a417-34-82-188-140.ngrok-free.app/";
+export const getURL = () => "https://96a5-34-139-29-38.ngrok-free.app/";
