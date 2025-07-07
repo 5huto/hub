@@ -25,7 +25,6 @@ const getMarkerIcon = (bicNum) => {
 
 const AllMap = () => {
   const [reportData, setReportData] = useState([]);
-  const [apiBase, setApiBase] = useState("");
   const [error, setError] = useState("");
 
   const center = [34.699228, 135.494274];
@@ -35,7 +34,6 @@ const AllMap = () => {
       try {
         const url = await getURL();
         const base = url.replace(/\/+$/, "").replace(/^\/+/, "");
-        setApiBase(base);
 
         const res = await fetch(`${base}/reports_info`, {
           headers: { "ngrok-skip-browser-warning": "true" },

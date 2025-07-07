@@ -1,5 +1,5 @@
 // App.js（修正版）
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 
 import { Routes, Route } from 'react-router-dom';
 import Login from './pages/Login'
@@ -7,17 +7,10 @@ import Home from './pages/Home';
 import Report from './pages/Report'
 import Map from './pages/Map';
 import Osaka from './pages/Osaka';
-import {userData} from './data/userData';
-import Status from './components/Status';
-import AllMap from './components/AllMap';
 
 
 function App() {
   //これはこのローカルでの仮データなので消す
-  <>
-  <Status user={userData} />
-  <AllMap user={userData} />
-  </>
 
   return (
     <div>
