@@ -47,7 +47,7 @@ const OsakaMap = () => {
         center={position}
         zoom={16}
         scrollWheelZoom={true}
-        style={{ height: '500px', width: '100%' }}
+        style={{ height: '700px', width: '100%' }}
       >
         <ChangeMapCenter center={position} />
         <TileLayer
