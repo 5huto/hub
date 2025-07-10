@@ -1,17 +1,36 @@
-.info-row {
-  display: flex;
-  flex-wrap: wrap;
+/* グリッド表示 */
+.report-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 1rem;
+  width: 100%;
+  padding: 0 1rem;
 }
 
-.info-item {
+/* 各通報カード */
+.report-card {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* カード内部の情報とアクションを横並び */
+.card-content {
   display: flex;
-  align-items: center;
-  min-width: 180px; /* 1項目あたりの幅を揃える（調整可） */
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 
-.info-label {
-  display: inline-block;
-  width: 80px;
-  font-weight: bold;
+.card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-action {
+  text-align: right;
 }

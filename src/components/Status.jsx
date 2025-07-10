@@ -101,44 +101,48 @@ const Status = () => {
   return (
     <div className="flex flex-col items-center px-4 py-6 space-y-6">
       {error && <div className="text-red-500">{error}</div>}
-      <div className="w-full max-w-2xl space-y-4">
-        {reports.map((item) => (
-          <div
-            key={item.report_id}
-            className="w-full max-w-md bg-white border border-gray-300 rounded-2xl shadow-md p-6"
-          >
-            <div className="info-row">
-              {/* ステータス選択 */}
-              <select
-                value={txtMap[item.report_id] ?? statusOptions[0].name}
-                onChange={(e) => handleChange(item.report_id, e.target.value)}
-                className="mb-2 p-2 border border-gray-300 rounded"
-              >
-                {statusOptions.map((opt) => (
-                  <option key={opt.id} value={opt.name}>
-                    {opt.id}.{opt.name}
-                  </option>
-                ))}
-              </select>
+      <div className="report-grid">
+  {reports.map((item) => (
+    <div
+      key={item.report_id}
+      className="report-card"
+    >
+      <div className="info-row">
+        <div className="card-content">
+          <div className="card-info">
+            <select
+              value={txtMap[item.report_id] ?? statusOptions[0].name}
+              onChange={(e) => handleChange(item.report_id, e.target.value)}
+              className="mb-2 p-2 border border-gray-300 rounded"
+            >
+              {statusOptions.map((opt) => (
+                <option key={opt.id} value={opt.name}>
+                  {opt.id}.{opt.name}
+                </option>
+              ))}
+            </select>
 
-              {/* 通報情報表示 */}
-              <p className="info-item">住所：{item.address ?? "—"}</p>
-              <p className="info-item">台数：{item.number ?? "—"}</p>
-              <p className="info-item">報告者：{item.user_name ?? "—"}</p>
-              <p className="info-item">送信日時：{new Date(item.created_at).toLocaleString()}</p>
-              <p className="info-item">経過：{getElapsedTime(item.created_at)}</p>
-
-              {/* 地図遷移ボタン */}
-              <button
-                onClick={() => handleMapClick(item.latitude, item.longitude)}
-                className="mt-2 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
-              >
-                マップ詳細を見る
-              </button>
-            </div>
+            <p className="info-item">住所：{item.address ?? "—"}</p>
+            <p className="info-item">台数：{item.number ?? "—"}</p>
+            <p className="info-item">報告者：{item.user_name ?? "—"}</p>
+            <p className="info-item">送信日時：{new Date(item.created_at).toLocaleString()}</p>
+            <p className="info-item">経過：{getElapsedTime(item.created_at)}</p>
           </div>
-        ))}
+
+          <div className="card-action">
+            <button
+              onClick={() => handleMapClick(item.latitude, item.longitude)}
+              className="mt-2 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+            >
+              マップ詳細を見る
+            </button>
+          </div>
+        </div>
       </div>
+    </div>
+  ))}
+</div>
+
     </div>
   );
 };
